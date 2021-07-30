@@ -6,8 +6,8 @@ df = pd.DataFrame(data['data'], columns=data['feature_names'])
 
 import sqlite3
 connect = sqlite3.connect('../db.sqlite3')
-df.to_sql('iris_table', connect, if_exists='replace')
+df.to_sql('iris_table', connect, if_exists='append')
 
-print(df)
+# print(df)
 
 connect.close()
